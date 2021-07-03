@@ -11,9 +11,12 @@ import lombok.NoArgsConstructor;
  * @Date 2021/3/31 22:10
  */
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class UserDO {
     private Long id;
     private String name;
+
+    public UserDO(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 }

@@ -1,4 +1,4 @@
-package test.com.gugu.demo.test0524;
+package com.gugu.demo.test0524;
 
 import com.gugu.demo.test0524.BinarySerachTest;
 import org.junit.Test;

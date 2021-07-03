@@ -11,10 +11,10 @@ import java.util.List;
  */
 public class TestList {
     public static void main(String[] args) {
-        List<UserDO> a = new ArrayList<UserDO>();
+        List<UserDO> a = new ArrayList<>();
         UserDO userDO;
         for (int i = 0 ; i < 10; i++){
-            userDO = new UserDO(Long.valueOf(i), "hhhh");
+            userDO = new UserDO(Long.valueOf(i), "gugu");
             a.add(userDO);
         }
         System.out.println(a);
