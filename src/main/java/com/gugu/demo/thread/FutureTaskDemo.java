@@ -16,9 +16,8 @@ public class FutureTaskDemo {
         FutureTask<String> futureTask = new FutureTask<>(aCallAble);
         Thread thread = new Thread(futureTask);
         thread.start();
-
+        int c = 0;
         do {
-
         } while (!futureTask.isDone());
 
         String result = null;
@@ -36,7 +35,7 @@ public class FutureTaskDemo {
 class ACallAble implements Callable<String>{
     @Override
     public String call() throws Exception {
-        Thread.sleep(1000);
+        Thread.sleep(10000);
         return "Thread-Name:" + Thread.currentThread().getName();
     }
 }
