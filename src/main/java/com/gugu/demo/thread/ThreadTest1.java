@@ -1,5 +1,9 @@
 package com.gugu.demo.thread;
 
+import jdk.nashorn.internal.runtime.linker.Bootstrap;
+
+import java.util.Hashtable;
+
 /**
  * @author Administrator
  * @Classname ThreadTest1
