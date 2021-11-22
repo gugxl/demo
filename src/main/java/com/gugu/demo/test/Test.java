@@ -1,5 +1,7 @@
 package com.gugu.demo.test;
 
+import com.gugu.demo.test.a.Bclass;
+
 /**
  * @author Administrator
  * @Classname Test
@@ -8,6 +10,7 @@ package com.gugu.demo.test;
  */
 public class Test {
     public static void main(String[] args) {
+        Bclass.test();
         System.out.println(test());
     }
 
