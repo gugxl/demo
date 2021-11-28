@@ -1,5 +1,7 @@
 package com.gugu.demo.concurrenthashmap;
 
+import org.junit.Test;
+
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -11,7 +13,8 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class ConcurrentHashMapDemo {
     private Map<Integer, Integer> cache =  new ConcurrentHashMap<>(15);
-    public static void main(String[] args) {
+    @Test
+    public void test() {
         ConcurrentHashMapDemo concurrentHashMapDemo = new ConcurrentHashMapDemo();
         System.out.println(concurrentHashMapDemo.fibonaacci(80));
     }
