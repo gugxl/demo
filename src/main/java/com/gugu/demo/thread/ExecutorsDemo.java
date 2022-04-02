@@ -48,6 +48,19 @@ class ARunnable implements Runnable {
     }
 }
 
+class BRunnable implements Callable<String> {
+    @Override
+    public String call() throws Exception {
+        try {
+            Thread.sleep(1 * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Current Thread Name:" + Thread.currentThread().getName());
+        return "success";
+    }
+}
+
 class AThreadFactory implements ThreadFactory {
     private final AtomicInteger threadNumber = new AtomicInteger(1);
 
