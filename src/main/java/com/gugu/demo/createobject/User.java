@@ -10,6 +10,11 @@ public class User implements Serializable, Cloneable {
         System.out.println("调用空的构造方法");
     }
 
+    public User(String userName, String address) {
+        this.userName = userName;
+        this.address = address;
+    }
+
     private String userName;
     // transient 关键词修饰的属性不会序列化
     private transient String address;
