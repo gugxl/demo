@@ -12,7 +12,16 @@ public class User implements Serializable {
 
     private static final long serialVersionUID = -8840853971861469954L;
 
-    private String userName;
+    public User() {
+        System.out.println("init User");
+    }
+
+    public User(String userName, String address) {
+        this.userName = userName;
+        this.address = address;
+    }
+
+    private String userName = "gugu";
     // transient 关键词修饰的属性不会序列化
     private transient String address;
 
