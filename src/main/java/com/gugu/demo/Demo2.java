@@ -13,8 +13,8 @@ import java.util.Objects;
  * @Date 2021/12/1 23:14
  */
 public class Demo2 {
-
-
+    // static 修饰的 userDO 生命周期会跟Demo2 类一致，如果Demo2类不被卸载，userDO会常驻内存
+    private static UserDO userDO = new UserDO(1L,"gugu");
 
     // 结果
     List<Long> allId = new ArrayList<>();
