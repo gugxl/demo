@@ -1,7 +1,6 @@
 package com.gugu.demo.threadpool;
 
 import com.gugu.demo.threadpool.communication.Notify;
-import javafx.concurrent.Worker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
