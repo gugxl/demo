@@ -1,17 +1,12 @@
 package com.gugu.demo.excel.poi;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.SneakyThrows;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.File;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,18 +27,23 @@ public class ExcelExport {
 
     private static void writeContent(File file) {
         List<Student> list = new ArrayList<Student>();
-        Student student1 = new Student();
-        student1.setName("小红");
-        student1.setMale(false);
-        student1.setHeight(167);
+        StringBuilder name = new StringBuilder("小红");
+        StringBuilder address = new StringBuilder("杭州");
 
-        Student student2 = new Student();
-        student2.setName("小明");
-        student2.setMale(true);
-        student2.setHeight(185);
+        for (int i = 0; i < 10; i++) {
+            name = name.append(name);
+            address = address.append(address);
+        }
+
+        Student student1 = new Student(name.toString(), false, 167, address.toString());
+        Student student2 = new Student(name.toString(), false, 167, address.toString());
 
         list.add(student1);
         list.add(student2);
+
+        for (int i = 0; i < 19; i++) {
+            list.addAll(list);
+        }
 
         ExcelUtil.createExcel(list, file);
     }
@@ -63,6 +63,8 @@ public class ExcelExport {
 }
 
 @Excel(name = "学生标签页")
+@Data
+@AllArgsConstructor
 class Student {
 
     @Excel(name = "姓名")
@@ -73,28 +75,7 @@ class Student {
     @Excel(name = "身高")
     private int height;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public boolean isMale() {
-        return male;
-    }
-
-    public void setMale(boolean male) {
-        this.male = male;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
-    }
+    @Excel(name = "地址")
+    private String address;
 }
 
