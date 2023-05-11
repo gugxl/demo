@@ -26,6 +26,9 @@ public class ExcelExport {
         writeExcelOneSheetOnceWrite();
     }
 
+    /**
+     * @throws IOException
+     */
     public static void writeExcelOneSheetOnceWrite() throws IOException {
 
         // 生成EXCEL并指定输出路径
@@ -37,7 +40,6 @@ public class ExcelExport {
         sheet.setSheetName("sheet1");
         sheet.setStartRow(0);
 
-        // 设置标题
         Table table = new Table(1);
         List<List<String>> titles = new ArrayList<List<String>>();
         titles.add(Arrays.asList("用户ID"));
