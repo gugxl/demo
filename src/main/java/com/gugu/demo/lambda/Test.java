@@ -28,7 +28,7 @@ public class Test {
 
     }
 
-    // 方法有两个参数，一个是
+    // 方法有两个参数
     private static void sayHello(Function<String, String> func, String parameter){
         String result = func.apply(parameter);
         System.out.println(result);
