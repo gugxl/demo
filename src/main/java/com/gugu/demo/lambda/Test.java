@@ -24,8 +24,6 @@ public class Test {
 
         // 函数引用也是一种函数式接口，所以也可以将函数引用作为方法的参数
         sayHello(String::toUpperCase, "hello");
-
-
     }
 
     // 方法有两个参数
