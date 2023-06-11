@@ -23,12 +23,79 @@ public class StreamDemo20 {
         // filter();
         // max_count();
         // map_flatMap();
-
-        // List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9);
-        // numbers.parallelStream().forEachOrdered(out::println);
+        // map_flatMap2();
+        // map_flatMap3();
+        // reduce();
+        // reduce2();
+        // collect_toList();
+        collect_count_averaging();
     }
 
+    private static void collect_count_averaging() {
+        Long count = personList.stream().collect(Collectors.counting());
+        Double average = personList.stream().collect(Collectors.averagingDouble(Person::getSalary));
 
+    }
+
+    private static void collect_toList() {
+        List<Integer> list = Arrays.asList(1, 6, 3, 4, 6, 7, 9, 6, 20);
+        List<Integer> listNew = list.stream().filter(x -> x % 2 == 0).collect(Collectors.toList());
+        Set<Integer> set = list.stream().filter(x -> x % 2 == 0).collect(Collectors.toSet());
+        Map<String, Person> map = personList.stream().filter(p -> p.getSalary() > 8000)
+            .collect(Collectors.toMap(Person::getName, p -> p));
+        System.out.println("toList:" + listNew);
+        System.out.println("toSet:" + set);
+        System.out.println("toMap:" + map);
+
+    }
+
+    private static void reduce2() {
+        Optional<Integer> sumSalary = personList.stream().map(Person::getSalary).reduce(Integer::sum);
+        Integer sumSalary2 = personList.stream().reduce(0, (sum, p) -> sum += p.getSalary(),
+            (sum1, sum2) -> sum1 + sum2);
+        Integer sumSalary3 = personList.stream().reduce(0, (sum, p) -> sum += p.getSalary(), Integer::sum);
+        Integer maxSalary = personList.stream().reduce(0, (max, p) -> max > p.getSalary() ? max : p.getSalary(),
+            Integer::max);
+        Integer maxSalary2 = personList.stream().reduce(0, (max, p) -> max > p.getSalary() ? max : p.getSalary(),
+            (max1, max2) -> max1 > max2 ? max1 : max2);
+
+        System.out.println("工资之和：" + sumSalary.get() + "," + sumSalary2 + "," + sumSalary3);
+        System.out.println("最高工资：" + maxSalary + "," + maxSalary2);
+
+
+    }
+
+    private static void reduce() {
+        List<Integer> list = Arrays.asList(1, 3, 2, 8, 11, 4);
+        Optional<Integer> sum = list.stream().reduce((x, y) -> x + y);
+        Optional<Integer> sum2 = list.stream().reduce(Integer::sum);
+        Integer sum3 = list.stream().reduce(0, Integer::sum);
+        System.out.println("list求和：" + sum.get() + "," + sum2.get() + "," + sum3);
+    }
+
+    private static void map_flatMap3() {
+        List<String> list = Arrays.asList("m,k,l,a", "1,3,5,7");
+        List<String> listNew = list.stream().flatMap(s -> Arrays.stream(s.split(","))).collect(Collectors.toList());
+        System.out.println("处理前的集合：" + list);
+        System.out.println("处理后的集合：" + listNew);
+    }
+
+    private static void map_flatMap2() {
+        List<Person> personListNew = personList.stream().map(person -> {
+            Person personNew = new Person(person.getName(), 0, 0, null, null);
+            personNew.setSalary(person.getSalary() + 10000);
+            return personNew;
+        }).collect(Collectors.toList());
+        System.out.println("一次改动前：" + personList.get(0).getName() + "-->" + personList.get(0).getSalary());
+        System.out.println("一次改动后：" + personListNew.get(0).getName() + "-->" + personListNew.get(0).getSalary());
+
+        List<Person> personListNew2 = personList.stream().map(person -> {
+            person.setSalary(person.getSalary() + 10000);
+            return person;
+        }).collect(Collectors.toList());
+        System.out.println("二次改动前：" + personList.get(0).getName() + "-->" + personListNew.get(0).getSalary());
+        System.out.println("二次改动后：" + personListNew2.get(0).getName() + "-->" + personListNew.get(0).getSalary());
+    }
 
     private static void map_flatMap() {
         // 1.英文字符串数组的元素全部改为大写
@@ -111,7 +178,7 @@ public class StreamDemo20 {
         stream.filter(x -> x > 7).forEach(out::println);
         // 2.筛选员工中工资高于8000的人
         List<String> collect =
-                personList.stream().filter(x -> x.salary > 8000).map(Person::getName).collect(Collectors.toList());
+            personList.stream().filter(x -> x.salary > 8000).map(Person::getName).collect(Collectors.toList());
         out.println("高于8000的员工姓名：" + "高于8000的员工姓名：" + collect);
     }
 
