@@ -28,12 +28,97 @@ public class StreamDemo20 {
         // reduce();
         // reduce2();
         // collect_toList();
-        collect_count_averaging();
+        // collect_count_averaging();
+        // partitioningBy_groupingBy();
+        // joiningTest();
+        // reducingTest();
+        // sorted();
+        distict_skip_limit();
     }
+
+    private static void distict_skip_limit() {
+        String[] arr1 = { "a", "b", "c", "d" };
+        String[] arr2 = { "d", "e", "f", "g" };
+        Stream<String> stream1 = Stream.of(arr1);
+        Stream<String> stream2 = Stream.of(arr2);
+
+        // concat:合并两个流 distinct：去重
+        List<String> newList = Stream.concat(stream1, stream2).distinct().collect(Collectors.toList());
+        // limit：限制从流中获得前n个数据
+        List<Integer> collect = Stream.iterate(1, x -> x + 2).limit(10).collect(Collectors.toList());
+        // skip：跳过前n个数据
+        List<Integer> collect2 = Stream.iterate(1, x -> x + 2).skip(1).limit(5).collect(Collectors.toList());
+
+        System.out.println("流合并：" + newList);
+        System.out.println("limit：" + collect);
+        System.out.println("skip：" + collect2);
+    }
+
+    private static void sorted() {
+        // 按工资升序排序（自然排序）
+        List<String> newList = personList.stream().sorted(Comparator.comparing(Person::getSalary)).map(Person::getName)
+            .collect(Collectors.toList());
+
+        // 按工资倒序排序
+        List<String> newList2 = personList.stream().sorted(Comparator.comparing(Person::getSalary).reversed())
+            .map(Person::getName).collect(Collectors.toList());
+
+        // 先按工资再按年龄升序排序
+        List<String> newList3 = personList.stream()
+            .sorted(Comparator.comparing(Person::getSalary).thenComparing(Person::getAge)).map(Person::getName)
+            .collect(Collectors.toList());
+        // 先按工资再按年龄自定义排序（降序）
+        List<String> newList4 = personList.stream().sorted((x1, x2) -> {
+            if (x1.getSalary() == x2.getSalary()) {
+                return x2.getAge() - x1.getAge();
+            } else {
+                return x2.getSalary() - x1.getSalary();
+            }
+        }).map(Person::getName).collect(Collectors.toList());
+
+        System.out.println("按工资升序排序：" + newList);
+        System.out.println("按工资降序排序：" + newList2);
+        System.out.println("先按工资再按年龄升序排序：" + newList3);
+        System.out.println("先按工资再按年龄自定义降序排序：" + newList4);
+
+    }
+
+    private static void reducingTest() {
+        Integer sum = personList.stream().collect(Collectors.reducing(0, Person::getSalary, (i, j) -> (i + j - 5000)));
+        System.out.println("员工扣税薪资总和：" + sum);
+        Optional<Integer> sum2 = personList.stream().map(Person::getSalary).reduce(Integer::sum);
+        System.out.println("员工薪资总和：" + sum2.get());
+
+    }
+
+    private static void joiningTest() {
+        String names = personList.stream().map(p -> p.getName()).collect(Collectors.joining(","));
+        System.out.println("所有员工的姓名：" + names);
+    }
+
+
+    private static void partitioningBy_groupingBy() {
+        Map<Boolean, List<Person>> part =
+            personList.stream().collect(Collectors.partitioningBy(x -> x.getSalary() > 8000));
+        Map<String, List<Person>> group = personList.stream().collect(Collectors.groupingBy(Person::getSex));
+        Map<String, Map<String, List<Person>>> group2 =
+            personList.stream().collect(Collectors.groupingBy(Person::getSex, Collectors.groupingBy(Person::getArea)));
+        System.out.println("员工按薪资是否大于8000分组情况：" + part);
+        System.out.println("员工按性别分组情况：" + group);
+        System.out.println("员工按性别、地区：" + group2);
+    }
+
 
     private static void collect_count_averaging() {
         Long count = personList.stream().collect(Collectors.counting());
         Double average = personList.stream().collect(Collectors.averagingDouble(Person::getSalary));
+        Optional<Integer> max = personList.stream().map(Person::getSalary).collect(Collectors.maxBy(Integer::compare));
+        Integer sum = personList.stream().collect(Collectors.summingInt(Person::getSalary));
+        DoubleSummaryStatistics collect = personList.stream().collect(Collectors.summarizingDouble(Person::getSalary));
+        System.out.println("员工总数：" + count);
+        System.out.println("员工平均工资：" + average);
+        System.out.println("员工工资总和：" + sum);
+        System.out.println("员工工资所有统计：" + collect);
 
     }
 
