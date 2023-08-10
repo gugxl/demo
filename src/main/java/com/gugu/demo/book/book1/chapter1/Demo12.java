@@ -1,0 +1,40 @@
+package com.gugu.demo.book.book1.chapter1;
+
+import lombok.SneakyThrows;
+
+public class Demo12 {
+    @SneakyThrows
+    public static void main(String[] args) {
+        final SynchronizedObject synchronizedObject = new SynchronizedObject();
+        Thread thread = new Thread(){
+            @Override
+            public void run() {
+                synchronizedObject.printString();
+            }
+        };
+        thread.setName("a");
+        thread.start();
+        Thread.sleep(1000);
+        Thread thread2 = new Thread(){
+            @Override
+            public void run() {
+                System.out.println("thread2 启动了，但是进入不了printString方法， 因为printString 被a线程永远的暂停了");
+                synchronizedObject.printString();
+            }
+        };
+        thread2.start();
+
+
+    }
+}
+
+class SynchronizedObject {
+    synchronized void printString(){
+        System.out.println("begin");
+        if (Thread.currentThread().getName().equals("a")){
+            System.out.println("a 线程永远suspend了");
+            Thread.currentThread().suspend();
+        }
+        System.out.println("end");
+    }
+}
