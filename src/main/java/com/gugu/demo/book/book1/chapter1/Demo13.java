@@ -5,23 +5,19 @@ import lombok.SneakyThrows;
 public class Demo13 {
     @SneakyThrows
     public static void main(String[] args) {
-        MyThread13 myThread13 = new MyThread13();
+        Thread myThread13 = new Thread(){
+            private long i = 0;
+            @Override
+            public void run() {
+                while (true){
+                    i++;
+                    System.out.println(i);
+                }
+            }
+        };
         myThread13.start();
         Thread.sleep(1000);
         myThread13.suspend();
         System.out.println("main end");
-
-    }
-}
-
-class MyThread13 extends Thread{
-    private long i = 0;
-    @Override
-    public void run() {
-        while (true){
-            i++;
-            System.out.println(i);
-        }
-
     }
 }

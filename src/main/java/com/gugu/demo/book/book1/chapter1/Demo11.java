@@ -7,6 +7,7 @@ public class Demo11 {
     @SneakyThrows
     public static void main(String[] args) {
         MyThread11 myThread11 = new MyThread11();
+
         myThread11.start();
         Thread.sleep(5000);
         myThread11.suspend();
@@ -24,16 +25,18 @@ public class Demo11 {
         Thread.sleep(5000);
         System.out.println("B="+System.currentTimeMillis() + "   i" + myThread11.getI());
     }
-}
-@Data
-class MyThread11 extends Thread{
-    private long i = 0;
 
-    @Override
-    public void run() {
-        while (true){
-            i++;
+    @Data
+    static class MyThread11 extends Thread{
+        private long i = 0;
+
+        @Override
+        public void run() {
+            while (true){
+                i++;
+            }
+
         }
-
     }
 }
+

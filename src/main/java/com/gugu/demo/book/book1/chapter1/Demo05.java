@@ -4,39 +4,32 @@ import lombok.SneakyThrows;
 
 public class Demo05 {
     public static void main(String[] args) {
-        ALogin aLogin = new ALogin();
-        aLogin.start();
-        BLogin bLogin = new BLogin();
-        bLogin.start();
+        new Thread(() -> {
+            LoginServlet.doPost("a", "aa");
+        }).start();
+
+        new Thread(() -> {
+            LoginServlet.doPost("b", "bbs");
+        }).start();
+
     }
-}
 
-class LoginServlet {
-    private static String userNameRef;
-    private static String passwordRef;
+    static class LoginServlet {
+        private static String userNameRef;
+        private static String passwordRef;
 
-    // synchronized
-    @SneakyThrows
-    public static void doPost(String userName, String password) {
-        userNameRef = userName;
-        if (userName.equals("a")) {
-            Thread.sleep(5000);
+        // synchronized
+        @SneakyThrows
+        public static void doPost(String userName, String password) {
+            userNameRef = userName;
+            if (userName.equals("a")) {
+                Thread.sleep(5000);
+            }
+            passwordRef = password;
+            System.out.println("username:" + userNameRef + ",password:" + passwordRef);
         }
-        passwordRef = password;
-        System.out.println("username:" + userNameRef + ",password:" + passwordRef);
     }
+
 }
 
-class ALogin extends Thread {
-    @Override
-    public void run() {
-        LoginServlet.doPost("a", "aa");
-    }
-}
 
-class BLogin extends Thread {
-    @Override
-    public void run() {
-        LoginServlet.doPost("b", "bb");
-    }
-}

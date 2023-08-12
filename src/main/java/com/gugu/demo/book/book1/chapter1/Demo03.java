@@ -1,12 +1,23 @@
 package com.gugu.demo.book.book1.chapter1;
 
-import org.jetbrains.annotations.NotNull;
-
 public class Demo03 {
     public static void main(String[] args) {
-        MyThread3 a = new MyThread3("A");
-        MyThread3 b = new MyThread3("B");
-        MyThread3 c = new MyThread3("C");
+        Runnable runnable = new Runnable() {
+            private int count = 5;
+
+            @Override
+            public void run() {
+                while (count > 0) {
+                    count--;
+                    System.out.println(Thread.currentThread().getName() + "执行count:" + count);
+                }
+            }
+        };
+
+        Thread a = new Thread(runnable, "A");
+        Thread b = new Thread(runnable, "B");
+        Thread c = new Thread(runnable, "C");
+
         a.start();
         b.start();
         c.start();
@@ -14,18 +25,4 @@ public class Demo03 {
 
 }
 
-class MyThread3 extends Thread{
-    private int count = 5;
 
-    public MyThread3(@NotNull String name) {
-        this.setName(name);
-    }
-
-    @Override
-    public void run() {
-        while (count > 0 ){
-            count--;
-            System.out.println(Thread.currentThread().getName() + "执行count:" + count);
-        }
-    }
-}

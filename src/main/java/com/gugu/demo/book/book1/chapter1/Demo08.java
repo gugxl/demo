@@ -5,7 +5,13 @@ import lombok.SneakyThrows;
 public class Demo08 {
     @SneakyThrows
     public static void main(String[] args) {
-        MyThread08 myThread08 = new MyThread08();
+        Thread myThread08 = new Thread() {
+            @Override
+            public void run() {
+                // 由于Runable是接口没有this对象不能改造为lambda方式
+                System.out.println("run isAlive:" + this.isAlive());
+            }
+        };
         System.out.println("before myThread08 isAlive:" + myThread08.isAlive());
         myThread08.start();
         Thread.sleep(1000);
@@ -14,9 +20,4 @@ public class Demo08 {
     }
 
 }
-class MyThread08 extends Thread{
-    @Override
-    public void run() {
-        System.out.println("run isAlive:"  + this.isAlive());
-    }
-}
+
