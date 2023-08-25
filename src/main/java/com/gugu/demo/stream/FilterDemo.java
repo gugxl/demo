@@ -1,7 +1,5 @@
 package com.gugu.demo.stream;
 
-import com.gugu.demo.Person;
-
 import java.util.List;
 import java.util.stream.Collectors;
 

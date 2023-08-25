@@ -1,8 +1,5 @@
 package com.gugu.demo.IdentityHashCode;
 
-import com.gugu.demo.UserDO;
-import lombok.Data;
-
 /**
  * @author gugu
  * @Classname IdentityHashCodeDemo

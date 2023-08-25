@@ -1,6 +1,6 @@
 package com.gugu.demo.finallydemo;
 
-import com.gugu.demo.UserDO;
+import com.gugu.demo.other.UserDO;
 
 /**
  * @author Administrator

@@ -1,0 +1,44 @@
+package com.gugu.demo.io;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.InetSocketAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class BIODemo {
+    public static void main(String[] args) throws IOException {
+        ExecutorService executorService = Executors.newFixedThreadPool(128);
+        ServerSocket serverSocket = new ServerSocket();
+        serverSocket.bind(new InetSocketAddress(1234));
+        while (true) {
+            Socket accept = serverSocket.accept();
+            executorService.submit(new ConnectTask(accept));
+        }
+    }
+}
+
+class ConnectTask extends Thread {
+    private Socket socket;
+
+    public ConnectTask(Socket socket) {
+        this.socket = socket;
+    }
+
+    @Override
+    public void run() {
+        while (true) {
+            try(InputStream inputStream = socket.getInputStream();
+                OutputStream outputStream =socket.getOutputStream() ) {
+                int read = inputStream.read();
+                System.out.println(read);
+                outputStream.write(read);
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+    }
+}
