@@ -13,7 +13,6 @@ public class Solution1 {
         char[] aa = a.toCharArray();
         char[] ba = b.toCharArray();
 
-
         while (i >= 0 && j >= 0) {
             int tmp = aa[i--]-48 + ba[j--]-48 + sup;
             if (tmp > 1) {
