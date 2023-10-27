@@ -47,7 +47,7 @@ public class SougouImgProcessor {
         String url = "https://pic.sogou.com/napi/pc/searchList?mode=1&cwidth=1920&cheight=1080&dm=4&start=%s&xml_len=%s&query==%s";
         SougouImgProcessor processor = new SougouImgProcessor(url, "美女");
 
-        int start = 0, size = 50, limit = 1000; // 定义爬取开始索引、每次爬取数量、总共爬取数量
+        int start = 0, size = 50, limit = 100; // 定义爬取开始索引、每次爬取数量、总共爬取数量
 
         for (int i = start; i < start + limit; i += size)
             processor.process(i, size);
