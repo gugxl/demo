@@ -1,5 +1,7 @@
 package com.gugu.demo.beanutils;
 
+import org.apache.commons.beanutils.PropertyUtils;
+
 /**
  * @author gugu
  * @Classname CommonsPropertyUtilsPropertiesCopier
@@ -9,6 +11,6 @@ package com.gugu.demo.beanutils;
 public class CommonsPropertyUtilsPropertiesCopier implements PropertiesCopier{
     @Override
     public void copyProperties(Object source, Object target) throws Exception {
-        org.apache.commons.beanutils.PropertyUtils.copyProperties(target, source);
+        PropertyUtils.copyProperties(target, source);
     }
 }
