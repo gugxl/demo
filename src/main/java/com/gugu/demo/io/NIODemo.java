@@ -4,10 +4,10 @@ import lombok.SneakyThrows;
 
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
-import java.nio.channels.SelectionKey;
-import java.nio.channels.Selector;
-import java.nio.channels.ServerSocketChannel;
-import java.nio.channels.SocketChannel;
+import java.nio.channels.*;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+import java.util.Iterator;
 
 public class NIODemo {
     @SneakyThrows
@@ -21,6 +21,34 @@ public class NIODemo {
         Selector selector = Selector.open();
         // 将通道和通道管理器绑定，并且为通道注册OP_ACCEPT事件
         channel.register(selector, SelectionKey.OP_ACCEPT);
+
+        while (selector.select() > 0) {
+            Iterator<SelectionKey> selectionKeyIterator = selector.selectedKeys().iterator();
+            while (selectionKeyIterator.hasNext()) {
+                SelectionKey selectionKey = selectionKeyIterator.next();
+                if (selectionKey.isAcceptable()) {
+                    SocketChannel socketChannel = channel.accept();
+                    socketChannel.configureBlocking(false);
+                    socketChannel.register(selector, SelectionKey.OP_READ);
+                } else if (selectionKey.isReadable()) {
+                    SocketChannel channel1 = (SocketChannel) selectionKey.channel();
+                    ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
+                    FileChannel outChannel = FileChannel.open(Paths.get("2.png"), StandardOpenOption.WRITE, StandardOpenOption.CREATE);
+                    while (channel1.read(byteBuffer) > 0) {
+                        // 在读之前都要切换成读模式
+                        byteBuffer.flip();
+
+                        outChannel.write(byteBuffer);
+
+                        // 读完切换成写模式，能让管道继续读取文件的数据
+                        byteBuffer.clear();
+                    }
+
+                }
+                selectionKeyIterator.remove();
+            }
+
+        }
     }
 }
 

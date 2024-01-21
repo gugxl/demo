@@ -1,5 +1,7 @@
 package com.gugu.demo.io;
 
+import lombok.SneakyThrows;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -15,8 +17,8 @@ public class BIODemo {
         ServerSocket serverSocket = new ServerSocket();
         serverSocket.bind(new InetSocketAddress(1234));
         while (true) {
-            Socket accept = serverSocket.accept();
-            executorService.submit(new ConnectTask(accept));
+            Socket socket = serverSocket.accept();
+            executorService.submit(new ConnectTask(socket));
         }
     }
 }
@@ -32,13 +34,26 @@ class ConnectTask extends Thread {
     public void run() {
         while (true) {
             try(InputStream inputStream = socket.getInputStream();
-                OutputStream outputStream =socket.getOutputStream() ) {
+                OutputStream outputStream = socket.getOutputStream()) {
                 int read = inputStream.read();
                 System.out.println(read);
                 outputStream.write(read);
-            }catch (Exception e){
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
     }
 }
+
+class Client {
+    @SneakyThrows
+    public static void main(String[] args) {
+        Socket socket = new Socket("127.0.0.1", 1234);
+        OutputStream outputStream = socket.getOutputStream();
+        outputStream.write("hello".getBytes());
+        outputStream.close();
+        socket.close();
+
+    }
+}
+
