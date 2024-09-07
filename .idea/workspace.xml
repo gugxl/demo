@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b11da72b-494f-4ad6-91db-278661259b65" name="Changes" comment="PDF 添加水印">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gugu/demo/ddkk/concurrency/ExecutorServiceDemo.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;gugxl&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:gugxl/new_demo.git&quot;,
+    &quot;accountId&quot;: &quot;3d1d2470-10e7-4450-963c-0250780aa26e&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$PROJECT_DIR$/../../../app/jdk/lib/src.zip!/java.base/java/util/concurrent/ExecutorService.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="customMavenHome" value="D:\app\apache-maven-3.9.8" />
+        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="#JAVA_HOME" />
+        <option name="workspaceImportForciblyTurnedOn" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="vmOptions" value="-Dfile.encoding=UTF-8" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2eukWChPZT94TyXcB4RGceYMvK2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.ARunnableaDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.AtomicIntegerDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.BIODemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.BaiduFanyi.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Base64Demo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.BaseDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.BeanUtilsTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.BenchmarkingStream.executor&quot;: &quot;Run&quot;,
+    &quot;Application.BookmarksDeal.executor&quot;: &quot;Run&quot;,
+    &quot;Application.C.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CglibProxyTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ChannelTransfer.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ClassInitDemo$SubClass.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.ClassInitDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ClassLoaderTest.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.CodecTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CollectDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CollectTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CollectionsTest.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.CompletableFutureTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CompressTest.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.CountExample.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CreateObject.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CustomThreadPoolTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CyclicBarrierDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DaemonTests.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo01.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo02.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo03.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo04.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo05.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo06.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo07.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo08.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo09.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo1.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Demo10.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo11.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo12.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo13.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo14.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo15.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo16.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo17.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo18.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo19.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo20.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo21.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo22.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo23.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo24$RunThread.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Demo25.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo26.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo29.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo30.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo4.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DistinctTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ExampleList.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ExcelExport.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ExecutorServiceDemo.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.ExecutorsDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ExportTemperatureDto.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FilterDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FinallyTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FinnalDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FlatMapDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ForeachTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ForkJoinMergeSortDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ForkJoinTask.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FutureTaskDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.GarbageTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.GsonDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HashMapForeach.executor&quot;: &quot;Run&quot;,
+    &quot;Application.IdentityHashCodeDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.InterruptTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ItextWatermark.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.JMHBenchmark.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.JMHSample_01_HelloWorld.executor&quot;: &quot;Run&quot;,
+    &quot;Application.JMHSample_03_States.executor&quot;: &quot;Run&quot;,
+    &quot;Application.JMHSample_04_DefaultState.executor&quot;: &quot;Run&quot;,
+    &quot;Application.JMHSample_05_StateFixtures.executor&quot;: &quot;Run&quot;,
+    &quot;Application.JMHSample_06_Blackhole.executor&quot;: &quot;Run&quot;,
+    &quot;Application.JManagerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.JoinDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.JsonSerializeBenchmark.executor&quot;: &quot;Run&quot;,
+    &quot;Application.JvmThread.executor&quot;: &quot;Run&quot;,
+    &quot;Application.KeyCpntroller.executor&quot;: &quot;Run&quot;,
+    &quot;Application.LeakTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.LocalClassLoader.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.LogTest.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MapDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MapExample.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MappedByteBufferTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MySQLTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.NIODemo.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Name.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Null.executor&quot;: &quot;Run&quot;,
+    &quot;Application.OOMDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.OptionalDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Outer.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PDFBoxDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ParallelStreamDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ParallelStreamTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ParamTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PipelineTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PrintABCUsingSemaphore.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PrivateMatter.executor&quot;: &quot;Run&quot;,
+    &quot;Application.QuickSort.executor&quot;: &quot;Run&quot;,
+    &quot;Application.RandomAccessTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Reactor.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ReduceDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.RegexQuestion.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ReorderingDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Sample.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.SemaphoreDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SerializableTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Service.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Service2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Service3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SeverClient.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Solution.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Solution012.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Solution0142.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Solution017.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Solution018.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Solution019.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Solution020.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Solution027.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Solution0383.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Solution040.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Solution0406.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Solution086.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Solution1.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Solution111.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Solution1480.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Solution175.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Solution191.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Solution194.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Solution1_2.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Solution4.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Solution5.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.SougouImgProcessor.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SpliteratorDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.StreamDemo20.executor&quot;: &quot;Run&quot;,
+    &quot;Application.StringTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test222.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test4.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test5.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test6.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test7.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TestArrayList.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TestClone.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TestCustomPool.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TestFuture.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TestProxy.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TestTimer.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TextToSpeech.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.ThreadDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ThreadGroupDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ThreadLocalDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ThreadLocalTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ThreadLocalTest2.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.ThreadPoolExecutorDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ThreadStopDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ThreadTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ThreadTest1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ThreadTest2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TreeMapTest.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.TreeTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.UnsafeTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.UnsafeTest2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.UnsafeTest3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.UnsafeTest4.executor&quot;: &quot;Run&quot;,
+    &quot;Application.VolatileDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.VolatileTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.VolitaleTest2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.WaitDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.WeakHashMapTest.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.YieldDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.com.gugu.demo.util.excel.poi.ExcelExport.executor&quot;: &quot;Run&quot;,
+    &quot;Application.com.gugu.demo.util.lock.Test.executor&quot;: &quot;Run&quot;,
+    &quot;Application.com.gugu.demo.util.proxy.staticproxy.TestProxy.executor&quot;: &quot;Run&quot;,
+    &quot;Application.com.gugu.demo.util.thread.TestArrayList.executor&quot;: &quot;Run&quot;,
+    &quot;Application.com.gugu.demo.vedio.highconcurrency.day06.Demo01.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.com.gugu.demo.vedio.highconcurrency.day06.Demo02.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.com.gugu.demo.vedio.highconcurrency.day09.Demo01.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.com.gugu.demo.vedio.highconcurrency.day09.Demo02.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.com.gugu.demo.vedio.highconcurrency.day11.Demo02.executor&quot;: &quot;Run&quot;,
+    &quot;Application.com.gugu.demo.vedio.highconcurrency.day11.Demo03.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.com.gugu.demo.vedio.highconcurrency.day11.Demo04.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.BinarySearchTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.C3p0Demo.demo01.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.C3p0Demo.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConcurrentHashMapDemo.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConcurrentHashMapDemo.test.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.DbcpDemo.demo01.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DbcpDemo.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StreamAPITest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Test333.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Test333.test.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WorkTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.com.gugu.demo.util.collections4 in demo.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.demo [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.demo [org.apache.maven.plugins:maven-install-plugin:2.4:install].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/火石/sss/saas标准版standard_investment_saas/pom.xml&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.build.tools.auto.reload&quot;: &quot;ALL&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\applicationfiles\IDEA\demo\src\main\resources" />
+      <recent name="D:\applicationfiles\IDEA\demo\src\main\java\com\gugu\demo\util\zerocopy" />
+      <recent name="D:\applicationfiles\IDEA\demo\src\main\java\com\gugu\demo\util\weakhashmap" />
+      <recent name="D:\applicationfiles\IDEA\demo\src\main\java\com\gugu\demo\util\thread\volatiletest" />
+      <recent name="D:\applicationfiles\IDEA\demo\src\main\java\com\gugu\demo\util\thread\unsafe" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="testaa" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.gugu.demo.algorithm.leetcode" />
+      <recent name="com.gugu.demo.util.base64" />
+      <recent name="com.gugu.demo.util.beanutil" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn install" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Solution1_2">
+    <configuration name="ExecutorServiceDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../app/jdk" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.gugu.demo.ddkk.concurrency.ExecutorServiceDemo" />
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gugu.demo.ddkk.concurrency.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Sample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../app/jdk" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.gugu.demo.baduai.Sample" />
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gugu.demo.baduai.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Solution020" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../app/jdk" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.gugu.demo.algorithm.Solution020" />
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gugu.demo.algorithm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Solution1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../app/jdk" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.gugu.demo.algorithm.leetcode.Solution1" />
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gugu.demo.algorithm.leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Solution1_2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../app/jdk" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.gugu.demo.algorithm.leetcode.Solution1_2" />
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gugu.demo.algorithm.leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../app/jdk" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="demo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Solution1" />
+      <item itemvalue="Application.Solution1_2" />
+      <item itemvalue="Application.ExecutorServiceDemo" />
+      <item itemvalue="Application.Sample" />
+      <item itemvalue="Application.Solution020" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Solution1_2" />
+        <item itemvalue="Application.Solution1" />
+        <item itemvalue="Application.ExecutorServiceDemo" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b11da72b-494f-4ad6-91db-278661259b65" name="Changes" comment="" />
+      <created>1712761880172</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712761880172</updated>
+      <workItem from="1712761881211" duration="1037000" />
+      <workItem from="1712763276789" duration="67000" />
+      <workItem from="1712763355670" duration="2339000" />
+      <workItem from="1712765712656" duration="159000" />
+      <workItem from="1712765884283" duration="5680000" />
+      <workItem from="1712842539347" duration="9534000" />
+      <workItem from="1712973925452" duration="20472000" />
+      <workItem from="1713015537001" duration="593000" />
+      <workItem from="1713016146043" duration="56000" />
+      <workItem from="1713016215949" duration="233000" />
+      <workItem from="1713016463282" duration="115000" />
+      <workItem from="1713016591864" duration="347000" />
+      <workItem from="1713017062732" duration="538000" />
+      <workItem from="1713017614750" duration="6803000" />
+      <workItem from="1713024537249" duration="518000" />
+      <workItem from="1713025095730" duration="297000" />
+      <workItem from="1713185149021" duration="996000" />
+      <workItem from="1713354377852" duration="1198000" />
+      <workItem from="1714139539687" duration="647000" />
+      <workItem from="1714140226324" duration="2531000" />
+      <workItem from="1714142778742" duration="380000" />
+      <workItem from="1714180471745" duration="3646000" />
+      <workItem from="1714310796769" duration="1846000" />
+      <workItem from="1714481295179" duration="126000" />
+      <workItem from="1714481438080" duration="2261000" />
+      <workItem from="1714628470313" duration="788000" />
+      <workItem from="1716621484638" duration="328000" />
+      <workItem from="1717503933980" duration="316000" />
+      <workItem from="1717504265246" duration="606000" />
+      <workItem from="1718373462317" duration="939000" />
+      <workItem from="1718889031215" duration="858000" />
+      <workItem from="1720013435525" duration="668000" />
+      <workItem from="1721308335223" duration="599000" />
+      <workItem from="1721629456812" duration="716000" />
+      <workItem from="1721825502053" duration="745000" />
+      <workItem from="1721828303512" duration="303000" />
+      <workItem from="1721863312395" duration="54000" />
+      <workItem from="1721864048152" duration="801000" />
+      <workItem from="1721865281184" duration="312000" />
+      <workItem from="1723339874383" duration="1226000" />
+      <workItem from="1723347282352" duration="1875000" />
+      <workItem from="1723373293633" duration="43000" />
+      <workItem from="1723373347109" duration="1200000" />
+      <workItem from="1723377843349" duration="641000" />
+      <workItem from="1723378539710" duration="2523000" />
+      <workItem from="1723551460960" duration="77000" />
+      <workItem from="1723551555230" duration="510000" />
+      <workItem from="1723552093475" duration="940000" />
+      <workItem from="1723992643514" duration="30000" />
+      <workItem from="1725705292314" duration="992000" />
+      <workItem from="1725706299152" duration="2028000" />
+      <workItem from="1725708702559" duration="597000" />
+    </task>
+    <task id="LOCAL-00001" summary="aa">
+      <option name="closed" value="true" />
+      <created>1712762239317</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712762239317</updated>
+    </task>
+    <task id="LOCAL-00002" summary="版本升级 重构">
+      <option name="closed" value="true" />
+      <created>1713025029618</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713025029618</updated>
+    </task>
+    <task id="LOCAL-00003" summary="PDF 添加水印">
+      <option name="closed" value="true" />
+      <created>1714485717650</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714485717650</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="c91b4b50-48e7-43e9-be3c-f4d38ced5d58" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="c91b4b50-48e7-43e9-be3c-f4d38ced5d58">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="aa" />
+    <MESSAGE value="版本升级 重构" />
+    <MESSAGE value="PDF 添加水印" />
+    <option name="LAST_COMMIT_MESSAGE" value="PDF 添加水印" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.net.ConnectException" package="java.net" />
+          <option name="timeStamp" value="4" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="6" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/gugu/demo/util/string/StringTest.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/demo$Demo03.ic" NAME="Demo03 Coverage Results" MODIFIED="1712843807581" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.gugu.demo.vedio.highconcurrency.day08.*</FILTER>
+    </SUITE>
+  </component>
+</project>
